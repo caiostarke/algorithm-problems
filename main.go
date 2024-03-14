@@ -1,15 +1,23 @@
 package main
 
 import (
-	"algorithm-problems/two_sum"
+	"algorithm-problems/binary_tree"
 	"fmt"
 )
 
 func main() {
-	numbers := []int{2, 3, 5, 7, 9, 11}
-	target := 9
+	bt := &binary_tree.BynaryTree{}
 
-	val1, val2 := two_sum.Two_Sum_HashTable(target, numbers)
-	fmt.Println(val1, val2)
-	fmt.Println()
+	values := []int{4, 2, 7, 1, 3, 6, 9}
+
+	for _, v := range values {
+		bt.Insert(v)
+	}
+
+	fmt.Println("Maximum value in the binary tree:", bt.FindMax())
 }
+
+//		4
+//	 2   	7
+// 1   3  6   9
+//
